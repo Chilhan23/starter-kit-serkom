@@ -1,8 +1,8 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
+    "name": "chilhan23/starter-kit-serkom",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "Starter Kit Laravel untuk Serkom RPL - Kopi Ulee Kareng dengan CRUD Produk",
     "keywords": [
         "laravel",
         "framework"
