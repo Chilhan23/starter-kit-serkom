@@ -18,6 +18,14 @@ class ProductFlowTest extends TestCase
         $response->assertSee('Kopi Ulee Kareng');
     }
 
+    public function test_field_wajib_harus_diisi(): void
+    {
+        $response = $this->post(route('products.store'), []);
+
+        $response->assertSessionHasErrors(['name', 'description', 'price']);
+        $this->assertDatabaseEmpty('products');
+    }
+
     public function test_produk_valid_dapat_disimpan(): void
     {
         $response = $this->post(route('products.store'), [
