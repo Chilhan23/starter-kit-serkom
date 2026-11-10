@@ -46,8 +46,13 @@
                             <td>
                                 Rp{{ number_format($product->price, 0, ',', '.') }}
                             </td>
-                            <td>{{ $product->image ?: 'kopi-default.jpg' }}</td>
-                            <td class="actions">
+                            <td>
+                            <img
+                                src="{{ $product->image ? asset('images/' . $product->image) : asset('kopi-default.jpg') }}"
+                                alt="{{ $product->name }}"
+                                style="width: 60px; height: 60px; object-fit:cover; border-radius: 8px; display: block;"
+                            >
+                        </td>                         <td class="actions">
                                 <a class="btn btn-small btn-edit" href="{{ route('products.edit', $product) }}">
                                     Edit
                                 </a>
